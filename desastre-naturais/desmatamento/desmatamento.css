@@ -1,0 +1,392 @@
+
+/*POPPINS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body{
+  overflow-x: hidden; /* Evita rolagem horizontal */
+    background-color: #050506;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    margin: 0; /* Remove margens padrão */
+    --default-blue-stroke: #4CAF50;
+    --default-grey-black-fill: #525252;
+    --default-strok: rgb(141, 141, 141);
+
+}
+
+/* Estilo da barra de rolagem para WebKit browsers */
+::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  
+}
+
+::-webkit-scrollbar-thumb {
+background: #ffc800;
+
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 10px;
+ 
+}
+
+
+/*NAVBAR INICIO*/
+
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent; /* Transparente por padrão */
+  transition: background-color 0.3s ease;
+}
+
+#header.scrolled {
+  background-color: #050506; /* Fica preto ao rolar */
+}
+
+.nav {
+  position: relative;
+  width: 100%; /* Ajusta a largura para 100% */
+  height: 80px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
+  padding-bottom: 10px;
+}
+
+.nav-link {
+  /* Estilos para os links */
+  color: #000; /* Exemplo de cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+  padding: 10px;
+  font-family: poppins;
+}
+
+.nav-link:hover {
+  color: #ffffff; /* LETRAS NAVBAR */
+}
+
+.nav .hamburger{
+  justify-content: right;
+  
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  font-size: 48px;
+  font-family: poppins;
+  text-decoration: none;
+  color: #ffc800;
+}
+
+.nav-list {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  
+}
+
+.nav-list  a {
+  font-size: 20px;
+  color: #ffc800;
+  padding-block: 16px;
+  text-decoration: none;
+  font-family: poppins;
+
+}
+ 
+.navbar-icon{
+  list-style: none;
+  padding-bottom: 10px;
+  display: flex;
+  gap: 15px;
+
+
+}
+.icons{
+  font-size: 20px;
+  color: #ffc800;
+  padding-block: 16px;
+  text-decoration: none;
+  font-family: poppins;
+  
+}
+
+.icons:hover {
+  color: #ffffff;
+}
+.navbar-menu:hover {
+  color: #ffffff;
+}
+
+.hamburger {
+  display: none;
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #FFC700;
+  cursor: pointer;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #FFC700;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+
+/* Estilos para o dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color:  #ffc800;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mostrar dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #161616;
+}
+
+
+/*NAVBAR FINAL*/
+/*IMAGEM PRINCIPAL HOME */
+.img-principal-div {
+  position: relative;
+  overflow-x: hidden; /* Evita rolagem horizontal */
+  width: 100vw;  /* Viewport Width */
+  height: 100vh; /* Viewport Height */
+}
+
+.img-principal {
+  width: 100vw;  /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  object-fit: cover; /* Ensures the image covers the entire area */
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #4CAF50; /* Dark green text color */
+  text-align: center;
+}
+
+.main-title-desmatamento {
+  font-size: 120px;
+  font-family: poppins;
+  color: #ffc800; /* Darker green */
+  letter-spacing: 20px;
+}
+
+.main-title-queimadas {
+  font-size: 120px;
+  font-family: poppins;
+  color: #ffc800; /* Darker green */
+  letter-spacing: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: #ffc800; /* Yellow text for subtitle */
+  font-family: poppins;
+  letter-spacing: 10PX;
+}
+
+
+/*IMAGEM PRINCIPAL HOME */
+/*SECTION MATERIA */
+
+
+.esqueleto-txt{
+
+    margin-inline: 15%;
+    margin-bottom: 3%;
+    
+}
+
+.titulo-txt{
+
+    color: #FFC700;
+    font-size: 30px;
+    font-family: poppins;
+    text-align: center;
+    margin-block: 1em;
+}
+
+.scroll-link{
+    color: #ffc800;
+    font-family: poppins;
+    
+}
+
+h2{
+    color: #FFC700;
+    font-family: poppins;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  
+}
+
+p{
+    font-family: poppins;
+    font-size: 18px;
+    color: #ffffff;
+    justify-content: justify;
+    text-align: justify;
+}
+
+.p-li{
+    padding: 25px;
+    font-family: poppins;
+    font-size: 18px;
+    color: #ffffff;
+    justify-content: justify;
+    text-align: justify;
+}
+
+.img-desmatamento{
+    align-items: center;
+    text-align: center;
+    margin: 2%;
+}
+
+
+.img-txt{
+
+    border: #FFC700 solid 3px;
+    width: 40%;
+    height: 30%;
+    align-items: center;
+}
+
+.subtitle-desastre-natural{
+    align-items: start;
+    font-size: 28px;
+}
+
+.lista-causas p{
+
+    padding-top: 30px;
+    font-family: poppins;
+    font-size: 18px;
+    color: #ffffff;
+    justify-content: justify;
+    text-align: justify;
+    
+   
+}
+
+ .lista-causas {
+   
+    color: #ffc800;
+    list-style-type: none;
+}
+
+.lista-subtopico{
+   
+  color: #ffc800;
+  list-style-type: none;
+  padding: left 20px;
+  list-style-type: circle;
+}
+   
+.p-li{
+    font-family: poppins;
+    font-size: 18px;
+    color: #ffffff;
+    justify-content: justify;
+    text-align: justify;
+    padding-top: 20px;
+}
+
+#topico2{
+
+  color: #FFC700; 
+ font-weight: bold;
+
+}
+
+#topico-principal{
+ color: #FFC700; 
+ font-weight: bold;
+}
+/*SECTION MATERIA FINAL*/
+
+/*ESTILIZAÇÃO DA MOVIMENTAÇÃO */
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: opacity 0.8s, filter 0.8s;
+    /* movimento da esquerda para a direira --transform: translate(-100%)--;*/
+    --transform: translate(-100%);
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0px);
+    --transform: translate(0);
+    /* movimento da esquerda para a direira --transform: translate(0)--;*/
+  }
+
+ /* Estilo para o SubtopicoF*/
+.subtopico {
+  padding-left: 20px; /* Recuo para a direita */
+  
+}

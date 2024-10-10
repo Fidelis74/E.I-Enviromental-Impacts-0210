@@ -1,0 +1,459 @@
+/*POPPINS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+body {
+	background: #050506;
+	
+	align-items: center;
+	justify-content: center;
+	height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+	margin: 0; /* Remove margens padrão */
+	--default-blue-stroke: #4CAF50;
+	--default-grey-black-fill: #525252;
+	--default-strok: rgb(141, 141, 141);
+}
+
+/* Estilo da barra de rolagem para WebKit browsers */
+::-webkit-scrollbar {
+	background: transparent;
+	width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background: #ffc800;
+  
+  }
+  
+  ::-webkit-scrollbar-corner {
+	border-radius: 10px;
+   
+  }
+  
+  
+  /*NAVBAR INICIO*/
+  
+  #header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background-color: transparent; /* Transparente por padrão */
+	transition: background-color 0.3s ease;
+  }
+  
+  #header.scrolled {
+	background-color: #050506; /* Fica preto ao rolar */
+  }
+  
+  .nav {
+	position: relative;
+	width: 100%; /* Ajusta a largura para 100% */
+	height: 80px;
+	margin-inline: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
+	padding-bottom: 10px;
+  }
+  
+  .nav-link {
+	/* Estilos para os links */
+	color: #000; /* Exemplo de cor do texto */
+	text-decoration: none; /* Remove o sublinhado */
+	padding: 10px;
+	font-family: poppins;
+  }
+  
+  .nav-link:hover {
+	color: #ffffff; /* LETRAS NAVBAR */
+  }
+  
+  .nav .hamburger{
+	justify-content: right;
+	
+  }
+  
+  .logo {
+	width: 50px;
+	height: 50px;
+	font-size: 48px;
+	font-family: poppins;
+	text-decoration: none;
+	color: #ffc800;
+  }
+  
+  .nav-list {
+	display: flex;
+	gap: 50px;
+	list-style: none;
+	
+  }
+  
+  .nav-list  a {
+	font-size: 20px;
+	color: #ffc800;
+	padding-block: 16px;
+	text-decoration: none;
+	font-family: poppins;
+  
+  }
+   
+  .navbar-icon{
+	list-style: none;
+	padding-bottom: 10px;
+	display: flex;
+	gap: 15px;
+  
+  
+  }
+  .icons{
+	font-size: 20px;
+	color: #ffc800;
+	padding-block: 16px;
+	text-decoration: none;
+	font-family: poppins;
+	
+  }
+  
+  .icons:hover {
+	color: #ffffff;
+  }
+  .navbar-menu:hover {
+	color: #ffffff;
+  }
+  
+  .hamburger {
+	display: none;
+	display: none;
+	border: none;
+	background: none;
+	border-top: 3px solid #FFC700;
+	cursor: pointer;
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+	content: " ";
+	display: block;
+	width: 30px;
+	height: 3px;
+	background: #FFC700;
+	margin-top: 5px;
+	position: relative;
+	transition: 0.3s;
+  }
+  
+  /* Estilos para o dropdown */
+  .dropdown {
+	position: relative;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #000000;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content li {
+	list-style: none;
+  }
+  
+  .dropdown-content a {
+	color:  #ffc800;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  /* Mostrar dropdown ao passar o mouse */
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+  .dropdown-content a:hover {
+	background-color: #161616;
+  }
+  
+  
+  /*NAVBAR FINAL*/
+
+svg text {
+	fill: var(--default-strok);
+	font-family: monospace;
+	font-weight: bolder;
+}
+
+.map-area-transform{ /*CENTRALIZA O MAPA */
+	text-align: center;
+	padding-top: 3%;
+}
+
+.legenda-select{
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	justify-content: center;
+}
+
+.aviso-select {
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	justify-content: center;
+	font-size: 20px;
+}
+
+
+.mapa-svg-estados {
+	fill: #373737;
+	-webkit-transition: .8s ease;
+	-moz-transition: .8s ease;
+	-ms-transition: .8s ease;
+	-o-transition: .8s ease;
+	transition: .8s ease;
+	stroke-dasharray: 180%;
+	stroke-dashoffset: -120%;
+	stroke-width: 2px;
+	stroke: var(--default-strok);
+		transform: scale(1.2); /* Aumenta o tamanho em 50% */
+		transform-origin: center; /* Centraliza a transformação */	
+}
+
+.mapa-svg-estados text {
+	stroke: none;
+}
+
+.mapa-svg-estados:hover {
+	cursor: pointer;
+	fill: var(--default-grey-black-fill);
+}
+
+.mapa-svg-estados-active {
+	cursor: pointer;
+	stroke: var(--default-blue-stroke);
+	fill: var(--default-grey-black-fill);
+	stroke-dashoffset: 0%;
+	-webkit-transition: .8s ease;
+	-moz-transition: .8s ease;
+	-ms-transition: .8s ease;
+	-o-transition: .8s ease;
+	transition: .8s ease;
+}
+
+.mapa-svg-estados-active text {
+	stroke: none;
+}
+
+.pointer-svg-map {
+	fill: var(--default-blue-stroke);
+	animation-direction: normal;
+	animation-delay: .3s;
+}
+
+.inactive-map-svg {
+	opacity: .5;
+	stroke: none !important;
+}
+
+.inactive-map-svg:hover {
+	stroke-dashoffset: -120%;
+	cursor: inherit;
+	fill: var(--default-grey-black-fill);
+}
+
+@keyframes pointer {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+#sotreq-select {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Centraliza horizontalmente o conteúdo dentro do container */
+}
+
+.class-select {
+	outline: none;
+	height: 40px;
+	padding: 10px 18px;
+	
+	color: #4CAF50;
+	margin-bottom: 2rem;
+}
+
+.select-container {
+	width: 100%;
+	margin-bottom: 20px;
+	max-width: 300px;
+	position: relative;
+}
+
+select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: #181818;
+	border: 2px solid #4CAF50;
+	border-radius: 1px;
+	margin-top: 75px;
+	padding: 10px;
+	font-size: 16px;
+	color: #4CAF50;
+	cursor: pointer;
+	outline: none;
+	width: 100%;
+}
+
+select::-ms-expand {
+	display: none; /* Esconde a seta padrão no Internet Explorer */
+}
+
+select option {
+	background-color: #181818;
+	color: #4CAF50;
+	padding: 10px;
+}
+
+.select-container::after {
+	content: '\25BC'; /* Seta para baixo */
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	pointer-events: none; /* Para não interferir na seleção */
+	color: #00ff08;
+}
+
+#estado-info{
+
+	color: #ff0000;
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.txt-estados{
+	margin: 10px;
+	
+}
+
+.mapa-h1{
+	text-align: center;
+	justify-content: center;
+	color: #4CAF50;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 1px;
+	
+}
+
+.mapa-p, ul{
+	text-align: justify;
+	font-size: 26px;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style: circle;
+	color: #ffffff;
+}
+
+.txt-estados .estado .conteudo {
+    display: none; /* Esconde o conteúdo por padrão */
+}
+
+.txt-estados .estado .mapa-h1 {
+    display: none; /* Esconde o h1 por padrão */
+}
+
+.txt-estados .estado.active .conteudo {
+    display: block; /* Mostra o conteúdo do estado ativo */
+}
+
+.txt-estados .estado.active .mapa-h1 {
+    display: block; /* Mostra o h1 do estado ativo */
+}
+
+.conteudo{
+	margin: 100px;
+}
+
+
+.site-footer {
+    background-color: #ff000000;
+    color: #ffffff;
+    font-family:  poppins;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ffc800;
+    padding-top: 20px;
+}
+
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ffc800;
+    text-decoration: none;
+}
+
+.footer-contact h3 {
+    margin-bottom: 10px;
+    text-align: top; /* Alinha o texto à esquerda */
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ffc800;
+    
+}
+
+.copy{
+    font-size:20px;
+    color:#fff;
+    text-align: center;
+    justify-content: center;
+}
+
+.li-footer{
+
+    text-decoration: none;
+    list-style-type: none;
+}

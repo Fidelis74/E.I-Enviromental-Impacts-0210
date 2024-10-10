@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Animação em Bolha</title>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Scripts -->
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Header e Navegação -->
+  <header id="header">
+    <nav class="nav hidden">
+      <a href="#" class="logo">
+        <img src="/imagem_2024-09-09_200437289-removebg-preview.png" alt="Logo" class="logo">
+      </a>
+      <button class="hamburger"></button>
+      <ul class="nav-list">
+        <li><a href="/carrosel/dist/index.html" class="nav-link">Home</a></li>
+        <li><a href="#" class="nav-link">Desastres Naturais</a></li>
+        <li><a href="#" class="nav-link">Quiz</a></li>
+        <li><a href="#" class="nav-link">Video Aula</a></li>
+        <li><a href="#" class="nav-link">Aprenda +</a></li>
+        <li><a href="#" class="nav-link">Sobre</a></li>
+      </ul>
+      <ul class="navbar-icon">
+        <li><a href="#" class="icons"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <!-- Espaço Extra Entre Seções -->
+  <div class="spacer"></div>
+
+  <!-- Seção Aprenda Mais -->
+  <section class="section-aprenda-mais">
+    <h1 class="tittle-home hidden">Aprenda mais sobre os impactos ambientais</h1>
+    <div class="slidermais" id="slidermais-2" data-mouse-down-at="0" data-prev-percentage="0">
+      <div class="slide-mais">
+        <div class="photo">
+          <img class="img-aprenda-mais" src="https://get.pxhere.com/photo/water-forest-wilderness-road-night-smoke-truck-fire-heat-fire-engine-burning-hot-hose-flames-blazing-dangerous-wildfire-firemen-geological-phenomenon-668449.jpg" alt="Queimadas" draggable="false">
+        </div>
+        <div class="text-aprensa-mais">
+          <h2 class="h2-aprenda-mais">Queimadas</h2>
+          <p class="P-aprenda-mais"></p>
+        </div>
+      </div>
+      <div class="slide-mais">
+        <div class="photo">
+          <img class="img-aprenda-mais" src="img/desmatamento/desmatamento.jpg" alt="Desmatamento" draggable="false">
+        </div>
+        <div class="text-aprensa-mais">
+          <h2 class="h2-aprenda-mais">Desmatamento</h2>
+          <p class="P-aprenda-mais"></p>
+        </div>
+      </div>
+      <div class="slide-mais">
+        <div class="photo">
+          <img class="img-aprenda-mais" src="/img/urbanizacao/urbanicacao.jpg" alt="Urbanização" draggable="false">
+        </div>
+        <div class="text-aprensa-mais">
+          <h2 class="h2-aprenda-mais">Urbanização</h2>
+          <p class="P-aprenda-mais"></p>
+        </div>
+      </div>
+      <div class="slide-mais">
+        <div class="photo">
+          <img class="img-aprenda-mais" src="/img/Poluicao/poluicao.webp" alt="Poluição" draggable="false">
+        </div>
+        <div class="text-aprensa-mais">
+          <h2 class="h2-aprenda-mais">Poluição</h2>
+          <p class="P-aprenda-mais"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Seção Aprenda Mais -->
+<section class="section-aprenda-mais">
+  <div class="slidermais" id="slidermais-1" data-mouse-down-at="0" data-prev-percentage="0">
+    <div class="slide-mais">
+      <div class="photo">
+        <img class="img-aprenda-mais" src="https://get.pxhere.com/photo/water-forest-wilderness-road-night-smoke-truck-fire-heat-fire-engine-burning-hot-hose-flames-blazing-dangerous-wildfire-firemen-geological-phenomenon-668449.jpg" alt="Queimadas" draggable="false">
+      </div>
+      <div class="text-aprensa-mais">
+        <h2 class="h2-aprenda-mais">Queimadas</h2>
+        <p class="P-aprenda-mais"></p>
+      </div>
+    </div>
+    <div class="slide-mais">
+      <div class="photo">
+        <img class="img-aprenda-mais" src="img/desmatamento/desmatamento.jpg" alt="Desmatamento" draggable="false">
+      </div>
+      <div class="text-aprensa-mais">
+        <h2 class="h2-aprenda-mais">Desmatamento</h2>
+        <p class="P-aprenda-mais"></p>
+      </div>
+    </div>
+    <div class="slide-mais">
+      <div class="photo">
+        <img class="img-aprenda-mais" src="/img/urbanizacao/urbanicacao.jpg" alt="Urbanização" draggable="false">
+      </div>
+      <div class="text-aprensa-mais">
+        <h2 class="h2-aprenda-mais">Urbanização</h2>
+        <p class="P-aprenda-mais"></p>
+      </div>
+    </div>
+    <div class="slide-mais">
+      <div class="photo">
+        <img class="img-aprenda-mais" src="/img/Poluicao/poluicao.webp" alt="Poluição" draggable="false">
+      </div>
+      <div class="text-aprensa-mais">
+        <h2 class="h2-aprenda-mais">Poluição</h2>
+        <p class="P-aprenda-mais"></p>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+  <!-- Scripts Adicionais -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://www.googletagmanager.com/gtag/js?id=UA-40525870-5" async></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js'></script>
+  <script src="./carrosel-animal.js"></script>
+</body>
+</html>

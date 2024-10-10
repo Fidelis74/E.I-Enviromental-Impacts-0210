@@ -1,0 +1,1233 @@
+
+/*POPPINS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body{
+  overflow-x: hidden; /* Evita rolagem horizontal */
+    background-color: #050506;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    margin: 0; /* Remove margens padrão */
+    --default-blue-stroke: #4CAF50;
+    --default-grey-black-fill: #525252;
+    --default-strok: rgb(141, 141, 141);
+
+}
+
+/* Estilo da barra de rolagem para WebKit browsers---------------------------------------------------------- */
+::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  
+}
+
+::-webkit-scrollbar-thumb {
+background: #ffc800;
+
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 10px;
+ 
+}
+/* Estilo da barra de rolagem para WebKit browsers---------------------------------------------------------- */
+
+/*NAVBAR INICIO ----------------------------------------------------------------------------------------------*/
+
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent; /* Transparente por padrão */
+  transition: background-color 0.3s ease;
+}
+
+#header.scrolled {
+  background-color: #050506; /* Fica preto ao rolar */
+}
+
+.nav {
+  position: relative;
+  width: 100%; /* Ajusta a largura para 100% */
+  height: 80px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
+  padding-bottom: 10px;
+}
+
+.nav-link {
+  /* Estilos para os links */
+  color: #000; /* Exemplo de cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+  padding: 10px;
+  font-family: poppins;
+}
+
+.nav-link:hover {
+  color: #ffffff; /* LETRAS NAVBAR */
+}
+
+.nav .hamburger{
+  justify-content: right;
+  
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  font-size: 48px;
+  font-family: poppins;
+  text-decoration: none;
+  color: #ffc800;
+}
+
+.nav-list {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  
+}
+
+.nav-list  a {
+  font-size: 20px;
+  color: #ffc800;
+  padding-block: 16px;
+  text-decoration: none;
+  font-family: poppins;
+
+}
+ 
+.navbar-icon{
+  list-style: none;
+  padding-bottom: 10px;
+  display: flex;
+  gap: 15px;
+
+
+}
+.icons{
+  font-size: 20px;
+  color: #ffc800;
+  padding-block: 16px;
+  text-decoration: none;
+  font-family: poppins;
+  
+}
+
+.icons:hover {
+  color: #ffffff;
+}
+.navbar-menu:hover {
+  color: #ffffff;
+}
+
+.hamburger {
+  display: none;
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #FFC700;
+  cursor: pointer;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #FFC700;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Estilos para o dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color:  #ffc800;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mostrar dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #161616;
+}
+
+
+/*NAVBAR FINAL ----------------------------------------------------------------------------------------------*/
+/* IMAGEM TOPO DO SITE --------------------------------------------------------------------------------------*/
+.img-principal-div {
+  position: relative;
+  overflow-x: hidden; /* Evita rolagem horizontal */
+  width: 100vw;  /* Largura da viewport */
+  height: 100vh; /* Altura da viewport */
+}
+
+/* Imagem principal com o degradê */
+.img-principal-div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(5, 5, 6, 0.3), #050506); /* Degradê mais escuro */
+  z-index: 1; /* Coloca o degradê acima da imagem */
+}
+
+.img-principal {
+  width: 100vw;  /* Largura total da viewport */
+  height: 100vh; /* Altura total da viewport */
+  object-fit: cover; /* Garante que a imagem cubra toda a área */
+  display: block;
+  position: relative;
+  z-index: 0; /* Coloca a imagem abaixo do degradê */
+}
+
+/* Texto sobreposto na imagem */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffc800; /* Cor amarela */
+  text-align: center;
+  z-index: 2; /* Garante que o texto esteja acima do degradê */
+}
+
+/* Título principal */
+.main-title {
+  font-size: 150px;
+  font-family: 'Poppins', sans-serif;
+  color: #ffc800; /* Cor amarela */
+  letter-spacing: 20px;
+  white-space: nowrap;
+  z-index: 3; /* Garantir que o texto esteja acima de todos */
+
+}
+
+/* Subtítulo */
+.subtitle {
+  
+
+  z-index: 3; /* Garantir que o texto esteja acima de todos */
+  font-size: 30px;
+  letter-spacing: 10px;
+  color: #ffc800; /* Cor amarela */
+  font-family: 'Poppins', sans-serif;
+
+}
+
+/* IMAGEM TOPO DO SITE --------------------------------------------------------------------------------------*/
+/* SOBRE NOS           --------------------------------------------------------------------------------------*/
+
+section.topo-site{
+  
+  padding: 40px 4%;
+  height: 100vh;
+}
+section.topo-site .flex{
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  
+}
+
+
+
+.flex{
+  display:flex;
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-bottom: 50px;
+  justify-content: space-between; /* You can adjust this if needed, for now it spreads content */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Optional: you can set a max width to limit content width */
+   
+}
+
+.topo-site .txt-topo-site  h1{
+  font-family: poppins;
+  color: #FFC700;
+  font-size: 35px;
+  line-height: 40px;
+  padding-bottom: 20px;
+}
+
+.topo-site .txt-topo-site p{
+
+  max-width: 70%;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  color:#fff;
+  font-size: 30px;
+  font-family: poppins;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+
+.sobre-nos-link {
+ 
+  text-decoration: none;
+  color: #ffffff;
+  font-family: poppins;
+}
+
+.btn-nos{
+
+  padding: 20px 60px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #FFC700;
+  border: 0;
+  border-radius: 30px;
+  cursor:pointer;
+  font-family: poppins;
+}
+
+
+.topo-site .img-topo-site img{
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+ 
+}
+/*ESTILIZAÇÃO DA MOVIMENTAÇÃO */
+.hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transition: opacity 0.8s, filter 0.8s;
+  /* movimento da esquerda para a direira --transform: translate(-100%)--;*/
+  --transform: translate(-100%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  --transform: translate(0);
+  /* movimento da esquerda para a direira --transform: translate(0)--;*/
+}
+
+
+/*FIM DA ESTILIZAÇÃO DA MOVIMENTAÇÃO */
+
+
+
+
+section.topo-site{
+  
+  padding: 40px 4%;
+}
+section.topo-site .flex-esquerda{
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-direction: row-reverse
+}
+
+.flex-esquerda{
+  padding: 50px;
+  display:flex;
+  padding-right: 200px;
+  padding-left: 200px;
+}
+
+.topo-site .txt-topo-site-esquerda  h1{
+  font-family: poppins;
+  color: #ffc800;
+  font-size: 30px;
+  line-height: 40px;
+ 
+}
+
+.topo-site .txt-topo-site-esquerda p{
+
+  max-width: 70%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color:#ffffff;
+  font-size: 30px;
+  font-family: poppins;
+  line-height: 1.5;
+  text-align: justify;
+  
+  
+
+}
+
+.txt-topo-site-esquerda{
+padding-left: 175px;
+}
+
+.sobre-nos-link {
+ 
+  text-decoration: none;
+  color: #050506;
+  font-family: poppins;
+}
+.btn-nos:hover {
+
+background-color: #ffffff;
+}
+
+.btn-nos{
+
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #ffc800;
+  border: 0;
+  border-radius: 30px;
+  cursor:pointer;
+  font-family: poppins;
+}
+
+
+
+.topo-site .img-topo-site img{
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+/*FINAL FOTO DIREIA*/
+
+
+
+@keyframes flutuar{
+  0%{
+    top: 0;
+  }
+  100%{
+    top: 30px;
+  }
+}
+
+/*DIGITALIZAÇÃO-----------------------------------------------------------------------------------------*/
+.container{
+  display: flex;
+  width: 900px; /*CARACTERES*/
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+.container .text{
+  position: relative;
+  color: #FFC700;
+  font-size: 2px;
+  font-weight: 600;
+  font-family: poppins;
+}
+.container .text.first-text{
+  color: #FFF;
+}
+
+.text.sec-text:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #050506;
+  border-left: 2px solid #ffc800;
+  animation: animate 4s steps(12) infinite;
+}
+    /*DIGITALIZAÇÃO FINAL*/
+    /*FLUTUAR IMAGEM SOBRE NOS-----------------------------------------*/
+@keyframes animate{
+  40%, 60%{
+      left: calc(100% + 4px);
+  }
+  100%{
+      left: 0%;
+  }
+}
+/*FLUTUAR IMAGEM SOBRE NOS-----------------------------------------*/
+/* SOBRE NOS  FINAL         --------------------------------------------------------------------------------------*/
+/*SLIDER DESASTRES NATURAIS      ----------------------------------------------------------*/
+.section-aprenda-mais {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 5%;
+}
+
+.slidermais {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  user-select: none;
+  padding: 0 5vw;
+  width: fit-content;
+}
+
+.slide-mais {
+  width: 50vw;
+  height: 500px;
+  margin: 0 5vw;
+  position: relative;
+  transition: all .7s ease;
+}
+
+.slide-mais > .photo {
+  width: inherit;
+  height: inherit;
+  transition: all 1s ease;
+  border: 5px solid #050506;
+}
+
+.slide-mais > .photo > .img-aprenda-mais {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease; /* Adiciona transição suave para o blur */
+}
+
+/* Efeito de blur na imagem ao passar o mouse sobre o slide */
+.slide-mais:hover .img-aprenda-mais {
+  filter: blur(5px); /* Aplica desfoque na imagem */
+}
+
+.slide-mais > .text-aprensa-mais {
+  position: absolute;
+  bottom: 20%;
+  right: -50px;
+  color: white;
+  transition: all .4s ease;
+}
+
+.h2-aprenda-mais{
+
+  color: #ffffff;
+  font-family: poppins;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.h2-aprenda-mais:hover{
+
+  color: #ffc800;
+
+}
+
+.slide-mais > .text-aprenda-mais {
+  position: absolute;
+  bottom: 20%; /* Ajuste a posição vertical */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(0%); /* Corrige a centralização */
+  color: white;
+  transition: all .4s ease;
+}
+
+.slide-mais > .text-aprenda-mais .h2-aprenda-mais {
+  font-size: 4rem;
+  margin-bottom: 0;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+
+/* Press animation */
+.slidermais:active {
+  cursor: grabbing;
+}
+
+.slidermais:active .slide-mais {
+  transform: scale(0.9);
+  margin: 0 0;
+}
+
+.slidermais:active .slide-mais .text-aprensa-mais {
+  transform: translateX(-40%);
+}
+
+
+.tittle-home{
+color: #ffc800;
+justify-content: center;
+text-align: center;
+font-family: poppins;
+margin-bottom: 100px;
+font-size: 50px;
+}
+
+
+/*SLIDER DESASTRES NATURAIS FINAL   ----------------------------------------------------------*/
+/*QUIZ HOME-------------------------------------------------------------------------------------*/
+
+.quiz-home{
+
+  background-color: #fffffff6 ; /*OU #FFC700;*/
+  height: 100vh;
+}
+.h1-quiz{
+  color: #050506;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  padding-top: 40px ;
+  margin-bottom: 30px;
+  font-size: 50px;
+  }
+
+.p-quiz{
+  color: #050506;
+  justify-content: justify;
+  text-align: justify;
+  font-family: poppins;
+  padding: 0px 250px 0px 250px;
+  line-height: 1.5;
+  font-size: 20px;
+
+}
+
+.custom-video {
+  /* Ajuste de largura e altura responsiva */
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+
+  /* Centraliza o vídeo na página */
+  display: block;
+  margin: 20px auto;
+}
+
+/*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/
+.btn-quiz-home {
+  padding: 10px 50px; /* Diminui o padding para reduzir o tamanho do fundo */
+  font-size: 20px; /* Tamanho da fonte ajustado para 16px */
+  font-weight: 600; /* Peso da fonte */
+  background-color: #FFC700;
+  border: 0;
+  border-radius: 30px; /* Borda arredondada */
+  cursor: pointer;
+  
+  }
+  
+  .btn-quiz-home:hover{
+  
+  background-color: #050506;
+  
+  }
+  
+  .quiz-home-link{
+  
+  color: #ffffff;
+  font-family: poppins;
+  text-decoration: none;
+  
+  }
+  
+
+  
+  .a-quiz-home{
+  
+  justify-content: center;
+  align-items: center;
+  display: flex; 
+  margin: 50px;
+  }
+
+  
+  /*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/
+/*QUIZ HOME FINAL------------------------------------------------------------------*/
+/*MAPA HOME-------------------------------------------------------------------------------------*/
+
+.mapa-home{
+
+  background-color: #050506 ;
+  height:100vh;
+}
+.h1-mapa{
+
+  color: #ffc800;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  padding-top: 60px ;
+  margin-bottom: 30px;
+  font-size: 50px;
+  }
+
+.p-mapa{
+  color: #ffffff;
+  justify-content: justify;
+  text-align: justify;
+  font-family: poppins;
+  padding-left: 250px;
+  line-height: 1.5;
+  font-size: 25px;
+  padding-top: 10%;
+
+}
+
+#topico2{
+  
+}
+
+.flex-mapa {
+  display: flex;
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  padding-right: 100px;
+}
+
+.text-mapa {
+  flex: 1; /* O texto ocupará o espaço restante */
+  padding-right: 20px; /* Espaço entre o texto e o vídeo */
+}
+
+.div-mapa-video {
+  flex-shrink: 0; /* Impede que o vídeo encolha */
+}
+
+
+.custom-video-mapa {
+  /* Ajuste de largura e altura responsiva */
+
+  /* Centraliza o vídeo na página */
+  display: block;
+  margin: 20px auto;
+ 
+}
+
+/*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/
+.btn-mapa-home {
+  padding: 10px 50px; /* Diminui o padding para reduzir o tamanho do fundo */
+  font-size: 20px; /* Tamanho da fonte ajustado para 16px */
+  font-weight: 600; /* Peso da fonte */
+  background-color: #FFC700;
+  border: 0;
+  border-radius: 30px; /* Borda arredondada */
+  cursor: pointer;
+  
+  
+  }
+  
+  .btn-mapa-home:hover{
+  
+  background-color: #ffffff;
+  
+  }
+  
+  .mapa-home-link{
+  
+  color: #000000;
+  font-family: poppins;
+  text-decoration: none;
+  
+  }
+  
+
+  
+  .a-mapa-home{
+  
+  
+  display: flex; 
+ padding: 5%;
+ padding-left: 29%;
+ 
+  }
+
+  
+  /*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/
+/*QUIZ HOME FINAL------------------------------------------------------------------*/
+
+.oie{
+  background-color: #050506;
+height: 100vh;}
+/* Estilo para o espaço extra */
+.spacer {
+  height: 100px; /* Ajuste o valor conforme necessário */
+}
+
+/*CARROSEL DE FRASES IMPACTANTES*/
+
+.section-coluna-video {
+ 
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  width: 100vw;
+  
+}
+
+.video-video {
+  width: 100%;
+  object-fit: cover; /* Preenche o espaço sem distorcer */
+}
+
+
+@media (max-width: 750px) {
+ 
+  html, body {
+    overflow-x: hidden;
+}
+
+
+  
+    .img-principal-div {
+      height: 60vh; /* Ajuste da altura da imagem para telas menores */
+      width: 100vw;
+    }
+  
+    .img-principal {
+      height: 60vh; /* Proporcional à altura da div */
+    }
+  
+    .main-title {
+      font-size: 80px; /* Reduzir tamanho do título principal */
+      letter-spacing: 5px; /* Reduzir espaçamento */
+    }
+  
+    .subtitle {
+      font-size: 16px; /* Reduzir tamanho da fonte do subtítulo */
+      letter-spacing: 2px; /* Reduzir espaçamento entre letras */
+    }
+  
+
+  .hamburger {
+    display: block;
+    z-index: 9999;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #050506;
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+    z-index: 1;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+
+    pointer-events: none;
+  }
+
+
+  .nav-list a {
+    font-size: 24px;
+    opacity: 0;
+  }
+
+  .nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+  }
+
+  .nav-list li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+  }
+
+  .nav-list li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+  }
+
+  /* Estilos ativos */
+
+  .nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+
+  .nav.active .nav-list a {
+    opacity: 1;
+  }
+
+  .nav.active .hamburger {
+    
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+
+    /*ABA DOS DESASTRES INICIO*/
+
+.h1-textos{
+
+  color: #FFC700;
+  margin: 10px;
+  font-size:29.7px;
+}
+
+.p-txt{
+  color: #FFC700;
+  font-family: poppins;
+  font-size:  20px
+  text-align: justify;
+}
+
+.container-textos-materia{
+
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.img-materia-desma{
+  max-width: 500px;
+  max-height: 400px;
+  margin: 25px;
+  border: 5px solid #FFC700;
+  
+}
+
+.img-slaoq{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+/*SOBRE NOS */
+    
+    section.topo-site {
+      padding: 30px 5%; /* Ajuste o padding para melhor adaptação */
+    }
+  
+    section.topo-site .flex {
+      display: flex;
+      flex-direction: column; /* Alinha itens em coluna */
+      align-items: center;
+      justify-content: center;
+      gap: 30px; /* Ajuste o espaço entre os itens */
+    }
+  
+    .flex {
+      padding: 0px; /* Ajuste o padding para melhor adaptação */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .topo-site .txt-topo-site h1 {
+      font-size: 28px; /* Ajustado o tamanho da fonte */
+      line-height: 36px; /* Ajustado o line-height */
+      text-align: center; /* Centralizado o texto */
+      
+    }
+  
+    .topo-site .txt-topo-site p {
+      max-width: 85%; /* Ajustado o max-width */
+      margin-top: 20px; /* Ajuste o margin para melhor adaptação */
+      margin-bottom: 20px;
+      font-size: 20px; /* Ajustado o tamanho da fonte */
+      line-height: 1.5; /* Ajustado o line-height */
+      text-align: justify;
+      justify-content: center;
+      padding-left: 30px;
+    }
+  
+    .sobre-nos-link {
+      text-decoration: none;
+      color: #ffffff;
+      font-family: poppins, sans-serif;
+    }
+  
+    .btn-nos {
+      padding: 10px 25px; /* Ajuste o padding para melhor adaptação */
+      font-size: 18px; /* Ajustado o tamanho da fonte */
+      font-weight: 600;    
+      cursor: pointer;
+      font-family: poppins, sans-serif;
+    }
+  
+  
+  
+    .btn-sobre {
+      padding: 15px 15px; /* Ajuste o padding para melhor adaptação */
+      font-size: 16px; /* Ajustado o tamanho da fonte */
+      font-weight: 600; /* Ajustado o peso da fonte */
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+      font-family: poppins, sans-serif;
+      text-align: center;
+    }
+  
+    .topo-site .img-topo-site img {
+      max-width: 80%; /* Ajustado o tamanho máximo da imagem */
+      padding-left: 30px; /* Ajuste o padding para melhor adaptação */
+      display: block;
+    }
+  
+    .container {
+      width: 100%; /* Ajustado para 100% da largura da tela */
+    align-items: center;
+    justify-content: center;
+    }
+  
+    .container .text {
+      font-size: 40px; /* Ajustado o tamanho da fonte */
+      justify-content: center;
+    }
+  
+    .container .text.first-text {
+      color: #ffffff;
+      text-align: center; /* Centralizado o texto */
+      padding-right: 6PX;
+      font-size: 30px;
+      white-space: nowrap;
+      
+    }
+  
+    .text.sec-text:before {
+      animation: animate 4s steps(12) infinite; /* Mantido o mesmo tempo da animação */
+    }
+  
+    @keyframes animate {
+      40%, 60% {
+        left: calc(100% + 4px);
+      }
+      100% {
+        left: 0%;
+      }
+    }
+
+    .topo-site .txt-topo-site  h1{
+      font-family: poppins;
+      color: #ffc800;
+      font-size: 30px;
+      line-height: 40px;
+    }
+    
+    .topo-site .txt-topo-site p{
+    
+      
+      margin-top: 40px;
+      margin-bottom: 40px;
+      color:#fafafa;
+      font-size: 20px;
+      font-family: poppins;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    /*SOBRE NOS FINAL */
+    /*APRENDA-MAIS*/
+    
+
+    .section-aprenda-mais{
+
+      margin-top: 30%;
+    }
+
+    .slide-mais > .text-aprensa-mais > .h2-aprenda-mais {
+      padding-bottom: 30px;
+      font-size: 2rem;
+      color: #FFC700;
+   
+    }
+
+    .h2-aprenda-mais {
+      padding-bottom: 30px;
+      font-size: 2rem;
+      
+    }
+    
+    .slide-mais > .text-aprensa-mais .h2-aprenda-mais {
+      font-size: 2rem;
+      margin-bottom: 0;
+      padding-bottom: 30px;
+      color: #ffffff;
+      cursor: pointer;
+    } 
+    /*APRENSA MASI FINAL*/
+  
+    /*QUIZ HOME-------------------------------------------------------------------------------------*/
+
+.quiz-home{
+
+ padding-bottom: 30px;
+}
+.h1-quiz{
+ 
+  padding-left: 14px;
+padding-right: 14px;
+  
+  }
+
+.p-quiz{
+  
+padding-left: 30px;
+padding-right: 30px;
+
+}
+
+.custom-video {
+  /* Ajuste de largura e altura responsiva */
+  width: 100%;
+  max-width: 90%;
+
+}
+/*QUIZ HOME FINAL------------------------------------------------------------------*/
+  /*MAPA HOME-------------------------------------------------------------------------------------*/
+
+.mapa-home{
+
+  background-color: #050506 ;
+  height:100vh;
+}
+.h1-mapa{
+
+  color: #ffc800;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  padding-top: 60px ;
+  margin-bottom: 30px;
+  font-size: 50px;
+  }
+
+.p-mapa{
+  color: #ffffff;
+  justify-content: justify;
+  text-align: justify;
+  font-family: poppins;
+  padding-left: 250px;
+  line-height: 1.5;
+  font-size: 25px;
+  padding-top: 10%;
+
+}
+
+.flex-mapa {
+  display: flex;
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  padding-right: 100px;
+}
+
+.text-mapa {
+  flex: 1; /* O texto ocupará o espaço restante */
+  padding-right: 20px; /* Espaço entre o texto e o vídeo */
+}
+
+.div-mapa-video {
+  flex-shrink: 0; /* Impede que o vídeo encolha */
+}
+
+
+.custom-video-mapa {
+  /* Ajuste de largura e altura responsiva */
+
+  /* Centraliza o vídeo na página */
+  display: block;
+  margin: 20px auto;
+ 
+}
+
+/*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/
+.btn-mapa-home {
+  padding: 10px 50px; /* Diminui o padding para reduzir o tamanho do fundo */
+  font-size: 20px; /* Tamanho da fonte ajustado para 16px */
+  font-weight: 600; /* Peso da fonte */
+  background-color: #FFC700;
+  border: 0;
+  border-radius: 30px; /* Borda arredondada */
+  cursor: pointer;
+  
+  
+  }
+  
+  .btn-mapa-home:hover{
+  
+  background-color: #ffffff;
+  
+  }
+  
+  .mapa-home-link{
+  
+  color: #000000;
+  font-family: poppins;
+  text-decoration: none;
+  
+  }
+  
+
+  
+  .a-mapa-home{
+  
+  
+  display: flex; 
+ padding: 5%;
+ padding-left: 29%;
+ 
+  }
+
+  
+  /*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/
+/*QUIZ HOME FINAL------------------------------------------------------------------*/
+
+
+}
+
+

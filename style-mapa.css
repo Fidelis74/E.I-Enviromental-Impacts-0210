@@ -1,0 +1,567 @@
+/*MAPA-----------------------------------------------------------*/
+
+svg text {
+	fill: var(--default-strok);
+	font-family: monospace;
+	font-weight: bolder;
+}
+
+.map-area-transform{ /*CENTRALIZA O MAPA */
+	text-align: center;
+}
+
+.legenda-select{
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	justify-content: center;
+}
+
+.aviso-select {
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	justify-content: center;
+	font-size: 20px;
+}
+
+
+.mapa-svg-estados {
+	fill: #373737;
+	-webkit-transition: .8s ease;
+	-moz-transition: .8s ease;
+	-ms-transition: .8s ease;
+	-o-transition: .8s ease;
+	transition: .8s ease;
+	stroke-dasharray: 180%;
+	stroke-dashoffset: -120%;
+	stroke-width: 2px;
+	stroke: var(--default-strok);
+		transform: scale(1.2); /* Aumenta o tamanho em 50% */
+		transform-origin: center; /* Centraliza a transformação */	
+}
+
+.mapa-svg-estados text {
+	stroke: none;
+}
+
+.mapa-svg-estados:hover {
+	cursor: pointer;
+	fill: var(--default-grey-black-fill);
+}
+
+.mapa-svg-estados-active {
+	cursor: pointer;
+	stroke: var(--default-blue-stroke);
+	fill: var(--default-grey-black-fill);
+	stroke-dashoffset: 0%;
+	-webkit-transition: .8s ease;
+	-moz-transition: .8s ease;
+	-ms-transition: .8s ease;
+	-o-transition: .8s ease;
+	transition: .8s ease;
+}
+
+.mapa-svg-estados-active text {
+	stroke: none;
+}
+
+.pointer-svg-map {
+	fill: var(--default-blue-stroke);
+	animation-direction: normal;
+	animation-delay: .3s;
+}
+
+.inactive-map-svg {
+	opacity: .5;
+	stroke: none !important;
+}
+
+.inactive-map-svg:hover {
+	stroke-dashoffset: -120%;
+	cursor: inherit;
+	fill: var(--default-grey-black-fill);
+}
+
+@keyframes pointer {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+#sotreq-select {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Centraliza horizontalmente o conteúdo dentro do container */
+}
+
+.class-select {
+	outline: none;
+	height: 40px;
+	padding: 10px 18px;
+	border-radius: 32px;
+	color: #FFC700;
+	margin-bottom: 2rem;
+}
+
+.select-container {
+	width: 100%;
+	margin-bottom: 20px;
+	max-width: 300px;
+	position: relative;
+}
+
+select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: #181818;
+	border: 2px solid #FFC700;
+	border-radius: 1px;
+	padding: 10px;
+	font-size: 16px;
+	color: #4CAF50;
+	cursor: pointer;
+	outline: none;
+	width: 100%;
+}
+
+select::-ms-expand {
+	display: none; /* Esconde a seta padrão no Internet Explorer */
+}
+
+select option {
+	background-color: #181818;
+	color: #4CAF50;
+	padding: 10px;
+}
+
+.select-container::after {
+	content: '\25BC'; /* Seta para baixo */
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	pointer-events: none; /* Para não interferir na seleção */
+	color: #00ff08;
+}
+
+#estado-info{
+
+	color: #ff0000;
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.txt-estados{
+	margin: 10px;
+	
+}
+
+.mapa-h1{
+	text-align: center;
+	justify-content: center;
+	color: #4CAF50;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-top: 20px;
+	
+}
+
+.mapa-p, ul{
+	text-align: justify;
+	font-size: 26px;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style: circle;
+	color: #ffffff;
+}
+
+.txt-estados .estado .conteudo {
+    display: none; /* Esconde o conteúdo por padrão */
+}
+
+.txt-estados .estado .mapa-h1 {
+    display: none; /* Esconde o h1 por padrão */
+}
+
+.txt-estados .estado.active .conteudo {
+    display: block; /* Mostra o conteúdo do estado ativo */
+}
+
+.txt-estados .estado.active .mapa-h1 {
+    display: block; /* Mostra o h1 do estado ativo */
+}
+
+.conteudo{
+	margin: 100px;
+}
+
+.container-select { /* ou a classe que você estiver usando */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza os itens no centro, se necessário */
+  justify-content: center; /* opcional, se você quiser centralizar verticalmente */
+}
+
+
+
+
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+ 
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: grey;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: grey;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+
+
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: grey;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: grey;
+  color: white;
+}
