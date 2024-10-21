@@ -28,180 +28,6 @@ body{
 
 }
 
-/* Estilo da barra de rolagem para WebKit browsers---------------------------------------------------------- */
-::-webkit-scrollbar {
-  background: transparent;
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  
-}
-
-::-webkit-scrollbar-thumb {
-background: #ffc800;
-
-}
-
-::-webkit-scrollbar-corner {
-  border-radius: 10px;
- 
-}
-/* Estilo da barra de rolagem para WebKit browsers---------------------------------------------------------- */
-
-/*NAVBAR INICIO ----------------------------------------------------------------------------------------------*/
-
-#header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: transparent; /* Transparente por padrão */
-  transition: background-color 0.3s ease;
-}
-
-#header.scrolled {
-  background-color: #050506; /* Fica preto ao rolar */
-}
-
-.nav {
-  position: relative;
-  width: 100%; /* Ajusta a largura para 100% */
-  height: 80px;
-  margin-inline: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
-  box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
-  padding-bottom: 10px;
-}
-
-.nav-link {
-  /* Estilos para os links */
-  color: #000; /* Exemplo de cor do texto */
-  text-decoration: none; /* Remove o sublinhado */
-  padding: 10px;
-  font-family: poppins;
-}
-
-.nav-link:hover {
-  color: #ffffff; /* LETRAS NAVBAR */
-}
-
-.nav .hamburger{
-  justify-content: right;
-  
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  font-size: 48px;
-  font-family: poppins;
-  text-decoration: none;
-  color: #ffc800;
-}
-
-.nav-list {
-  display: flex;
-  gap: 50px;
-  list-style: none;
-  
-}
-
-.nav-list  a {
-  font-size: 20px;
-  color: #ffc800;
-  padding-block: 16px;
-  text-decoration: none;
-  font-family: poppins;
-
-}
- 
-.navbar-icon{
-  list-style: none;
-  padding-bottom: 10px;
-  display: flex;
-  gap: 15px;
-
-
-}
-.icons{
-  font-size: 20px;
-  color: #ffc800;
-  padding-block: 16px;
-  text-decoration: none;
-  font-family: poppins;
-  
-}
-
-.icons:hover {
-  color: #ffffff;
-}
-.navbar-menu:hover {
-  color: #ffffff;
-}
-
-.hamburger {
-  display: none;
-  display: none;
-  border: none;
-  background: none;
-  border-top: 3px solid #FFC700;
-  cursor: pointer;
-}
-
-.hamburger::after,
-.hamburger::before {
-  content: " ";
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: #FFC700;
-  margin-top: 5px;
-  position: relative;
-  transition: 0.3s;
-}
-
-/* Estilos para o dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #000000;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content li {
-  list-style: none;
-}
-
-.dropdown-content a {
-  color:  #ffc800;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Mostrar dropdown ao passar o mouse */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #161616;
-}
-
-
-/*NAVBAR FINAL ----------------------------------------------------------------------------------------------*/
 /* IMAGEM TOPO DO SITE --------------------------------------------------------------------------------------*/
 .img-principal-div {
   position: relative;
@@ -240,6 +66,10 @@ background: #ffc800;
   color: #ffc800; /* Cor amarela */
   text-align: center;
   z-index: 2; /* Garante que o texto esteja acima do degradê */
+
+  /*Pablo mexeu*/
+
+  cursor: default;
 }
 
 /* Título principal */
@@ -250,6 +80,7 @@ background: #ffc800;
   letter-spacing: 20px;
   white-space: nowrap;
   z-index: 3; /* Garantir que o texto esteja acima de todos */
+  
 
 }
 
@@ -308,10 +139,15 @@ section.topo-site .flex{
   margin-bottom: 20px;
   padding-bottom: 30px;
   color:#fff;
-  font-size: 30px;
+  
   font-family: poppins;
   line-height: 1.5;
   text-align: justify;
+
+  /*Pablo mexeu*/
+
+  cursor: default;
+  font-size: 24px;
 }
 
 
@@ -340,21 +176,7 @@ section.topo-site .flex{
   animation: flutuar 2s ease-in-out infinite alternate;
  
 }
-/*ESTILIZAÇÃO DA MOVIMENTAÇÃO */
-.hidden {
-  opacity: 0;
-  filter: blur(15px);
-  transition: opacity 0.8s, filter 0.8s;
-  /* movimento da esquerda para a direira --transform: translate(-100%)--;*/
-  --transform: translate(-100%);
-}
 
-.show {
-  opacity: 1;
-  filter: blur(0px);
-  --transform: translate(0);
-  /* movimento da esquerda para a direira --transform: translate(0)--;*/
-}
 
 
 /*FIM DA ESTILIZAÇÃO DA MOVIMENTAÇÃO */
@@ -398,9 +220,6 @@ section.topo-site .flex-esquerda{
   font-family: poppins;
   line-height: 1.5;
   text-align: justify;
-  
-  
-
 }
 
 .txt-topo-site-esquerda{
@@ -462,9 +281,14 @@ background-color: #ffffff;
   font-size: 2px;
   font-weight: 600;
   font-family: poppins;
+
+  /*Pablo mexeu*/
+
+  cursor: default;
 }
 .container .text.first-text{
   color: #FFF;
+  padding-right: 10px;
 }
 
 .text.sec-text:before{
@@ -598,27 +422,40 @@ justify-content: center;
 text-align: center;
 font-family: poppins;
 margin-bottom: 100px;
-font-size: 50px;
+
+  /*Pablo mexeu*/
+
+  font-size: 40px;
+  cursor: default;
+
 }
 
-
-/*SLIDER DESASTRES NATURAIS FINAL   ----------------------------------------------------------*/
-/*QUIZ HOME-------------------------------------------------------------------------------------*/
+/*QUIZ*/
 
 .quiz-home{
 
   background-color: #fffffff6 ; /*OU #FFC700;*/
-  height: 100vh;
+
+  /*Pablo mexeu*/
+
+  height: 1080px;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .h1-quiz{
   color: #050506;
   justify-content: center;
   text-align: center;
   font-family: poppins;
-  padding-top: 40px ;
-  margin-bottom: 30px;
   font-size: 50px;
-  }
+
+  /*Pablo mexeu*/
+
+  margin-bottom: 40px;
+}
 
 .p-quiz{
   color: #050506;
@@ -629,6 +466,9 @@ font-size: 50px;
   line-height: 1.5;
   font-size: 20px;
 
+  /*Pablo mexeu*/
+
+  margin-bottom: 60px;
 }
 
 .custom-video {
@@ -636,67 +476,79 @@ font-size: 50px;
   width: 100%;
   max-width: 900px;
   height: auto;
-
   /* Centraliza o vídeo na página */
   display: block;
   margin: 20px auto;
 }
 
 /*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/
-.btn-quiz-home {
+
+.btn-quiz-home 
+{
   padding: 10px 50px; /* Diminui o padding para reduzir o tamanho do fundo */
   font-size: 20px; /* Tamanho da fonte ajustado para 16px */
   font-weight: 600; /* Peso da fonte */
   background-color: #FFC700;
   border: 0;
   border-radius: 30px; /* Borda arredondada */
-  cursor: pointer;
+  cursor: pointer;  
+}
   
-  }
-  
-  .btn-quiz-home:hover{
-  
+.btn-quiz-home:hover
+{
   background-color: #050506;
-  
-  }
-  
-  .quiz-home-link{
-  
-  color: #ffffff;
-  font-family: poppins;
-  text-decoration: none;
-  
-  }
-  
+}
 
+.quiz-home-link
+{
+    color: #ffffff;
+    font-family: poppins;
+    text-decoration: none;
+}
   
-  .a-quiz-home{
-  
+.aula-home-link
+{ 
+  color: #000000;
+  font-family: poppins;
+  text-decoration: none; 
+}
+   
+.a-quiz-home
+{
   justify-content: center;
   align-items: center;
   display: flex; 
-  margin: 50px;
-  }
+
+  /*Pablo mexeu*/
+
+  margin-top: 70px;
+}
 
   
   /*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/
-/*QUIZ HOME FINAL------------------------------------------------------------------*/
+/*Aula HOME FINAL------------------------------------------------------------------*/
 /*MAPA HOME-------------------------------------------------------------------------------------*/
 
 .mapa-home{
 
   background-color: #050506 ;
-  height:100vh;
+  
+  /*Pablo mexeu*/
+  height: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
 }
 .h1-mapa{
 
   color: #ffc800;
-  justify-content: center;
-  text-align: center;
+  justify-content: justify;
+  text-align: justify;
   font-family: poppins;
   padding-top: 60px ;
-  margin-bottom: 30px;
   font-size: 50px;
+  padding-left: 250px;
   }
 
 .p-mapa{
@@ -711,14 +563,11 @@ font-size: 50px;
 
 }
 
-#topico2{
-  
-}
-
 .flex-mapa {
   display: flex;
   align-items: center; /* Alinha o conteúdo verticalmente ao centro */
   padding-right: 100px;
+padding-top: 20p;
 }
 
 .text-mapa {
@@ -813,18 +662,17 @@ height: 100vh;}
 }
 
 
-@media (max-width: 750px) {
+@media (max-width: 750px) 
+{
  
   html, body {
     overflow-x: hidden;
-}
+  }
 
-
-  
-    .img-principal-div {
+  .img-principal-div {
       height: 60vh; /* Ajuste da altura da imagem para telas menores */
       width: 100vw;
-    }
+  }
   
     .img-principal {
       height: 60vh; /* Proporcional à altura da div */
@@ -1130,6 +978,7 @@ padding-right: 30px;
 
 }
 /*QUIZ HOME FINAL------------------------------------------------------------------*/
+
   /*MAPA HOME-------------------------------------------------------------------------------------*/
 
 .mapa-home{
@@ -1223,11 +1072,147 @@ padding-right: 30px;
  
   }
 
-  
-  /*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/
-/*QUIZ HOME FINAL------------------------------------------------------------------*/
-
-
 }
 
 
+
+/*VIDEO AULA*/
+
+.aula-home
+{
+  background-color: #050506 ; /*OU #FFC700;*/
+
+  /*Pablo mexeu*/
+
+  height: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.h1-aula
+{
+  color: #ffffff;
+  justify-content: center;
+  text-align: center;
+  font-family: poppins;
+  font-size: 50px;
+
+  /*Pablo mexeu*/
+
+  margin-bottom: 40px;
+}
+
+.p-aula
+{
+  color: #ffffff;
+  justify-content: justify;
+  text-align: justify;
+  font-family: poppins;
+  padding: 0px 250px 0px 250px;
+  line-height: 1.5;
+  font-size: 20px;
+
+  /*Pablo mexeu*/
+
+  margin-bottom: 60px;
+}
+
+/*AULA HOME FINAL------------------------------------------------------------------*/
+.slideraula {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  user-select: none;
+  padding: 0 5vw;
+  width: fit-content;
+  justify-content: flex-start; /* Alinha à esquerda */
+}
+
+.slide-aula {
+  width: 50vw;
+  height: 500px;
+  margin: 0 2vw; /* Diminui a margem horizontal */
+  position: relative;
+  transition: all .7s ease;
+}
+
+.slide-aula > .photo {
+  width: inherit;
+  height: inherit;
+  transition: all 1s ease;
+  border: 5px solid #050506;
+}
+
+.slide-aula > .photo > .img-aula { /* Alterado para .img-aula */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease; /* Adiciona transição suave para o blur */
+}
+
+.slide-aula:hover .img-aula { /* Alterado para .img-aula */
+  filter: blur(5px); /* Aplica desfoque na imagem */
+}
+
+.slide-aula > .text-aula { /* Alterado para .text-aula */
+  position: absolute;
+  bottom: 20%; /* Ajuste a posição vertical */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Corrige a centralização */
+  color: white;
+  transition: all .4s ease;
+}
+
+
+.slideraula:active {
+  cursor: grabbing;
+}
+
+.slideraula:active .slide-aula {
+  transform: scale(0.9);
+  margin: 0 0;
+}
+
+.slideraula:active .slide-aula .text-aula { /* Alterado para .text-aula */
+  transform: translateX(-40%);
+}
+
+
+
+/*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/
+
+.btn-aula-home 
+{
+  padding: 10px 50px; /* Diminui o padding para reduzir o tamanho do fundo */
+  font-size: 20px; /* Tamanho da fonte ajustado para 16px */
+  font-weight: 600; /* Peso da fonte */
+  background-color: #FFC700;
+  border: 0;
+  border-radius: 30px; /* Borda arredondada */
+  cursor: pointer;
+}
+
+.btn-aula-home:hover
+{  
+  background-color: #ffffff; 
+}
+
+.aula-home-link
+{  
+  color: #050506;
+  font-family: poppins;
+  text-decoration: none;
+}
+
+.a-aula-home
+{
+  justify-content: center;
+  align-items: center;
+  display: flex; 
+  margin-top: 70px;
+}
+
+  
+  /*BOTÃO DO APRENDA MAIS----------------------------------------------------------*/

@@ -1,0 +1,54 @@
+/*CSS DAS ANIÇÕES*/
+/*HOME*/
+.efeito-txt-topo, .efeito-img-topo, .txt-principal-topo1,.txt-principal-topo2, .slide-mais-1,.slide-mais-2,.mapa-txt,.mapa-vd,.quiz-vd, .vd-1,.vd-2,.vd-3{
+    
+      visibility: hidden;
+    }
+
+
+    .titulos-home{
+      visibility: hidden;
+    }
+
+    /*os videos vao sobrepor o outro ao transicionar*/
+    .vd-1{
+      z-index: 3;
+    }
+
+    .vd-2{
+      z-index: 2;
+    }
+
+    .vd-3{
+      z-index: 1;
+    }
+
+/*ABA DESMATAMENTO*/
+
+.txt, .artigo-movimentacao{
+  visibility: hidden;
+}
+
+/*MAPA*/
+
+.select-box-map, .map-movi,.p-map1,.p-map2{
+  visibility: hidden;
+}
+
+/*VIDEO AULA */
+.titulo-impacto-movi{
+
+  visibility: hidden;
+}
+
+.mov-vd-1 {
+  visibility: hidden; /* Remova essa regra, caso exista */
+ 
+}
+
+/*SOBRE*/
+
+.img-movi-sobre,.txt-movi-sobre,.principios-objetivo-mov,.mov-img,.coluna1-mov,.coluna2-mov{
+
+  visibility: hidden;
+}

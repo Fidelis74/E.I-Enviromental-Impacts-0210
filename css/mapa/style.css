@@ -13,182 +13,9 @@ body {
 	--default-blue-stroke: #4CAF50;
 	--default-grey-black-fill: #525252;
 	--default-strok: rgb(141, 141, 141);
+	scroll-behavior: smooth;
 }
 
-/* Estilo da barra de rolagem para WebKit browsers */
-::-webkit-scrollbar {
-	background: transparent;
-	width: 5px;
-  }
-  
-  ::-webkit-scrollbar-track {
-	
-  }
-  
-  ::-webkit-scrollbar-thumb {
-  background: #ffc800;
-  
-  }
-  
-  ::-webkit-scrollbar-corner {
-	border-radius: 10px;
-   
-  }
-  
-  
-  /*NAVBAR INICIO*/
-  
-  #header {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	background-color: transparent; /* Transparente por padrão */
-	transition: background-color 0.3s ease;
-  }
-  
-  #header.scrolled {
-	background-color: #050506; /* Fica preto ao rolar */
-  }
-  
-  .nav {
-	position: relative;
-	width: 100%; /* Ajusta a largura para 100% */
-	height: 80px;
-	margin-inline: auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-left: 50px;
-	padding-right: 50px;
-	box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
-	padding-bottom: 10px;
-  }
-  
-  .nav-link {
-	/* Estilos para os links */
-	color: #000; /* Exemplo de cor do texto */
-	text-decoration: none; /* Remove o sublinhado */
-	padding: 10px;
-	font-family: poppins;
-  }
-  
-  .nav-link:hover {
-	color: #ffffff; /* LETRAS NAVBAR */
-  }
-  
-  .nav .hamburger{
-	justify-content: right;
-	
-  }
-  
-  .logo {
-	width: 50px;
-	height: 50px;
-	font-size: 48px;
-	font-family: poppins;
-	text-decoration: none;
-	color: #ffc800;
-  }
-  
-  .nav-list {
-	display: flex;
-	gap: 50px;
-	list-style: none;
-	
-  }
-  
-  .nav-list  a {
-	font-size: 20px;
-	color: #ffc800;
-	padding-block: 16px;
-	text-decoration: none;
-	font-family: poppins;
-  
-  }
-   
-  .navbar-icon{
-	list-style: none;
-	padding-bottom: 10px;
-	display: flex;
-	gap: 15px;
-  
-  
-  }
-  .icons{
-	font-size: 20px;
-	color: #ffc800;
-	padding-block: 16px;
-	text-decoration: none;
-	font-family: poppins;
-	
-  }
-  
-  .icons:hover {
-	color: #ffffff;
-  }
-  .navbar-menu:hover {
-	color: #ffffff;
-  }
-  
-  .hamburger {
-	display: none;
-	display: none;
-	border: none;
-	background: none;
-	border-top: 3px solid #FFC700;
-	cursor: pointer;
-  }
-  
-  .hamburger::after,
-  .hamburger::before {
-	content: " ";
-	display: block;
-	width: 30px;
-	height: 3px;
-	background: #FFC700;
-	margin-top: 5px;
-	position: relative;
-	transition: 0.3s;
-  }
-  
-  /* Estilos para o dropdown */
-  .dropdown {
-	position: relative;
-  }
-  
-  .dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #000000;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-  }
-  
-  .dropdown-content li {
-	list-style: none;
-  }
-  
-  .dropdown-content a {
-	color:  #ffc800;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-  }
-  
-  /* Mostrar dropdown ao passar o mouse */
-  .dropdown:hover .dropdown-content {
-	display: block;
-  }
-  
-  .dropdown-content a:hover {
-	background-color: #161616;
-  }
-  
-  
-  /*NAVBAR FINAL*/
 
 svg text {
 	fill: var(--default-strok);
@@ -216,7 +43,28 @@ svg text {
 	font-size: 20px;
 }
 
+.efeito-descer-a{
+	fill: #373737;
+	-webkit-transition: .8s ease;
+	-moz-transition: .8s ease;
+	-ms-transition: .8s ease;
+	-o-transition: .8s ease;
+	transition: .8s ease;
+	stroke-dasharray: 180%;
+	stroke-dashoffset: -120%;
+	stroke-width: 2px;
+	stroke: var(--default-strok);
+	outline: none; /* Remove o contorno ao clicar */
 
+}
+
+
+
+  
+  .efeito-descer-a:focus {
+	outline: none; /* Remove o contorno ao focar no link */
+  }
+  
 .mapa-svg-estados {
 	fill: #373737;
 	-webkit-transition: .8s ease;
@@ -236,14 +84,15 @@ svg text {
 	stroke: none;
 }
 
-.mapa-svg-estados:hover {
+.efeito-descer-a:hover {
 	cursor: pointer;
 	fill: var(--default-grey-black-fill);
 }
 
+
 .mapa-svg-estados-active {
 	cursor: pointer;
-	stroke: var(--default-blue-stroke);
+	stroke: #eeff00;
 	fill: var(--default-grey-black-fill);
 	stroke-dashoffset: 0%;
 	-webkit-transition: .8s ease;
@@ -355,14 +204,45 @@ select option {
 }
 
 .mapa-h1{
-	text-align: center;
-	justify-content: center;
-	color: #4CAF50;
-	font-family: Arial, Helvetica, sans-serif;
-	padding: 1px;
-	
+	color: #FFC700;
+    font-family: poppins;
+    padding-top: 30px;
+    
 }
 
+li{
+	list-style-type: none;
+}
+.mapa-h2{
+	color: #FFC700;
+    font-family: poppins;
+    padding-top: 30px;
+	font-size: 30px
+}
+
+.mapa-h3{
+	color: #FFC700;
+    font-family: poppins;
+    padding-top: 30px;
+	font-size: 25px
+}
+
+.p-mapa{
+    font-family: poppins;
+    font-size: 18px;
+    color: #ffffff;
+    justify-content: justify;
+    text-align: justify;
+}
+
+.img-map{
+
+	text-align: center;
+	justify-content: center;
+	border-radius: 20px;
+	 height: 50%;
+	 width: 50%;
+}
 .mapa-p, ul{
 	text-align: justify;
 	font-size: 26px;
@@ -386,11 +266,6 @@ select option {
 .txt-estados .estado.active .mapa-h1 {
     display: block; /* Mostra o h1 do estado ativo */
 }
-
-.conteudo{
-	margin: 100px;
-}
-
 
 .site-footer {
     background-color: #ff000000;
@@ -457,3 +332,146 @@ select option {
     text-decoration: none;
     list-style-type: none;
 }
+
+
+    .conteudo-0
+    {
+        margin-top: 150px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: default;
+    }
+
+    .conteudo-1
+    {
+        width: 1200px;
+    }
+
+    .conteudo-1 h1
+    {
+        color: #FFC700;
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+    }
+
+    .conteudo-1 p
+    {
+        margin-top: 50px;
+        font-size: 24px;
+    }
+
+    .conteudo-2
+    {
+        width: 1200px;
+    }
+
+    .conteudo-3
+    {
+        width: 1200px;
+    }
+
+    .conteudo h1
+    {
+        color: #FFC700;
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        font-family: poppins;
+    }
+
+    .conteudo p
+    {
+        font-size: 24px;
+    }
+
+    .h2-estados
+    {
+        font-size: 35px;
+		margin-top: 30px;
+        
+    }
+
+    .conteudo .imagem-direita
+    {
+        background-color: #FFC700;
+        width: 400px;
+        height: 500px;
+        margin-right: 60px;
+       
+    }
+
+    .imagem-direita img{
+		width: 450px;
+		height: 650px;
+    }
+
+    .conteudo .imagem-esquerda
+    {
+        background-color: #FFC700;
+		width: 450px;
+		height: 50px;
+        margin-left: 60px;
+       
+    }
+
+    .imagem-esquerda img
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .conteudo .bloco
+    {
+       padding-left: 30px;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .medidas
+    {
+        font-size: 20px;
+        width: 600px;
+        color: white;
+        text-align: justify;
+        font-family: poppins;
+    }
+
+    .medidas li
+    {
+        margin-top: 10px;
+        
+		
+    }
+
+    .h3-estados
+    {
+		font-family: poppins;
+        display: flex;
+        color: #ffffff;
+		font-weight: normal;
+		justify-content: center;
+	}
+
+    .separação
+    {
+        display: flex;
+        margin-top: 50px;
+		gap: 30PX;
+    }
+
+    .site-footer
+    {
+        margin-top: 250px;
+    }
+
+	.section-1{
+		height: 100vh;
+	}

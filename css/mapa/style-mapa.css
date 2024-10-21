@@ -1,5 +1,8 @@
 /*MAPA-----------------------------------------------------------*/
 
+body,html{
+  scroll-behavior: smooth;
+}
 svg text {
 	fill: var(--default-strok);
 	font-family: monospace;
@@ -101,11 +104,11 @@ svg text {
 
 .class-select {
 	outline: none;
-	height: 40px;
+	height: 5%;
 	padding: 10px 18px;
-	border-radius: 32px;
 	color: #FFC700;
 	margin-bottom: 2rem;
+  font-family: poppins;
 }
 
 .select-container {
@@ -124,7 +127,7 @@ select {
 	border-radius: 1px;
 	padding: 10px;
 	font-size: 16px;
-	color: #4CAF50;
+	color: #ffffff;
 	cursor: pointer;
 	outline: none;
 	width: 100%;
@@ -193,10 +196,6 @@ select option {
 
 .txt-estados .estado.active .mapa-h1 {
     display: block; /* Mostra o h1 do estado ativo */
-}
-
-.conteudo{
-	margin: 100px;
 }
 
 .container-select { /* ou a classe que você estiver usando */
@@ -564,4 +563,39 @@ table {
 ::-moz-selection {
   background-color: grey;
   color: white;
+}
+
+
+/* Estilos para o dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color:  #ffc800;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mostrar dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #161616;
 }

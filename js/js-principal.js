@@ -25,44 +25,6 @@ setInterval(textLoad, 12000);
 
 
 
-//MOVIMENTAÇÃO SITE
-
-const myObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
-});
-
-const elements = document.querySelectorAll('.hidden');
-elements.forEach((element) => myObserver.observe(element));
-
-
-//JS DO MAPA 
-
-!function(s){s(function(){function a(s){s.appendTo(s.parents("svg>g"))}s(".mapa-svg-estados").click(function(){s(this).siblings().removeClass("mapa-svg-estados-active"),s(this).addClass("mapa-svg-estados-active"),s(".class-select").val(s(this).attr("id")).trigger("change"),a(s(this))}),s(".class-select > option").each(function(){s(this).addClass(s(this).attr("value"))}),s(".class-select").change(function(){s("."+s(this).val()+"-class").siblings().removeClass("mapa-svg-estados-active"),s("."+s(this).val()+"-class").addClass("mapa-svg-estados-active"),a(s("."+s(this).val()+"-class"))})})}(jQuery);                         
-
-function toggleEstado(estado) {
-    var estadoElemento = document.querySelector('.' + estado);
-    
-    // Alterna a classe 'active' para mostrar ou esconder o conteúdo e o h1
-    if (estadoElemento.classList.contains('active')) {
-        estadoElemento.classList.remove('active');
-    } else {
-        // Remove a classe 'active' de todos os outros estados
-        var estados = document.querySelectorAll('.txt-estados .estado');
-        estados.forEach(function(est) {
-            est.classList.remove('active');
-        });
-
-        // Adiciona a classe 'active' ao estado clicado
-        estadoElemento.classList.add('active');
-    }
-}
-
 
 /**NAV */
 $(document).ready(function() {
@@ -77,6 +39,7 @@ $(document).ready(function() {
   });
 
 
+  
   //CARROSEL APRENDA MAIS 
   //ROLAGEM AUTOMATICA
   window.dataLayer = window.dataLayer || [];
@@ -197,4 +160,4 @@ $(document).ready(function() {
   observer.observe(video);
   //FINAL PLAY AUTOMATICO
 
-// CARROSEL DE FRASES
+
