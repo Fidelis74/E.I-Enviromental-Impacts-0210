@@ -103,6 +103,8 @@ section.topo-site{
   
   padding: 40px 4%;
   height: 100vh;
+  display:flex;
+  justify-content: center;
 }
 section.topo-site .flex{
   align-items: center;
@@ -116,7 +118,7 @@ section.topo-site .flex{
 .flex{
   display:flex;
   padding-top: 100px;
-  padding-left: 200px;
+  
   padding-bottom: 50px;
   justify-content: space-between; /* You can adjust this if needed, for now it spreads content */
   align-items: center;
