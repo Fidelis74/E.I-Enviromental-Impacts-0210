@@ -1,3 +1,4 @@
+
 var startButton = document.querySelector("#start-btn");
 var themeButtons = document.querySelectorAll(".theme-btn");
 var startLayout = document.querySelector(".start-screen");
@@ -17,7 +18,7 @@ var sfxWrong = new Audio("https://sndup.net/vmg6/d");
 
 // Perguntas para cada tema
 var desmatamentoQuestions = [
-  {
+ {
     question: "Qual é a principal causa do desmatamento na Amazônia brasileira?",
     choices: ["Expansão urbana", "Instalação de usinas nucleares", "Pecuária extensiva", "Mineração em áreas costeiras"],
     correct: 2
@@ -236,7 +237,7 @@ function resetChoices() {
 // Função para começar o jogo
 function startGame() {
   // Defina aqui o tempo do timer dinamicamente em segundos
-  let timerDuration = 30; // Altere o valor para o tempo desejado (em segundos)
+  let timerDuration = 60; // Altere o valor para o tempo desejado (em segundos)
   
   // Ajusta a duração da animação via JavaScript
   document.documentElement.style.setProperty('--timing', `${timerDuration}s`);
@@ -329,4 +330,27 @@ themeButtons.forEach(btn => {
     startLayout.classList.remove("hidden");
   });
 });
+
+// Função para atualizar o contador de perguntas
+function updateQuestionCounter() {
+  const currentQuestionNumber = currentQuestionIndex + 1;
+  const totalQuestions = questions.length;
+  const counterElement = document.getElementById('question-counter');
+  if (counterElement) {
+    counterElement.textContent = `Pergunta ${currentQuestionNumber} de ${totalQuestions}`;
+  }
+}
+function loadQuestion() {
+  let currentQuestion = questions[currentQuestionIndex];
+  questionText.innerHTML = currentQuestion.question;
+
+  choiceButtons.forEach((btn, index) => {
+    btn.innerHTML = currentQuestion.choices[index];
+    btn.onclick = () => checkAnswer(index);
+  });
+
+  resetTimer();  // Reinicia o timer para a nova pergunta
+  
+  updateQuestionCounter();  // Atualiza o contador de questões
+}
 

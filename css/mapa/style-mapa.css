@@ -255,7 +255,7 @@ hr {
 }
 
 mark {
-  background: #ff0;
+  background: #FFC700;
   color: #000;
 }
 
@@ -599,3 +599,20 @@ table {
 .dropdown-content a:hover {
   background-color: #161616;
 }
+
+
+
+
+.fixed-icon {
+
+  position: fixed; /* Mantém o ícone fixo na tela */
+  right: 20px; /* Distância do lado direito */
+  bottom: 20px; /* Distância da parte inferior */
+  padding: 20px;
+  background-color: #050506; /* Fundo transparente */
+  border: #ffc800 4px solid; /* Sem borda */
+  cursor: pointer;
+  transition: transform 0.3s;
+ 
+}
+
