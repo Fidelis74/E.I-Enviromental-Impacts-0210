@@ -39,8 +39,8 @@ $(document).ready(function() {
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
 
-        // Calcula a posição com o offset de 80px acima
-        const offset = 1000;
+        // Calcula a posição com o offset de 100px acima
+        const offset = 100; // Alterado para 100px
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -50,3 +50,4 @@ $(document).ready(function() {
         });
     });
 });
+
